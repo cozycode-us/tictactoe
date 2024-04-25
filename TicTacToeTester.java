@@ -1,22 +1,27 @@
+import java.util.Arrays; 
+
 public class TicTacToeTester
 {
-    //DO NOT ALTER
     public static void main(String[] args)
     {
-        TicTacToe board = new TicTacToe();
-        printBoard(board.getBoard());
-    }
-public static void printBoard(String[][] array)
-{
-    for(String[] row: array)
-    {
-        for(String play: row)
+        //This is to help you test your methods. Feel free to add code at the end to check
+        //to see if your checkWin method works!
+        TicTacToe game = new TicTacToe();
+        System.out.println("Initial Game Board:");
+        game.printBoard();
+        
+        //Prints the first row of turns taken
+        for(int row = 0; row < 3; row++)
         {
-            System.out.print(play+ " ");
+            if(game.pickLocation(0, row))
+            {
+                game.takeTurn(0, row);
+            }
         }
-        System.out.println();
+        System.out.println("\nAfter three turns:");
+        game.printBoard();
+        
+        
+    
     }
 }
-
-}
-
