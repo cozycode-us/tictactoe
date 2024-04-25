@@ -6,16 +6,17 @@ public class TicTacToeTester
         TicTacToe board = new TicTacToe();
         printBoard(board.getBoard());
     }
-
-    public static void printBoard(String[][] array)
+public static void printBoard(String[][] array)
+{
+    for(String[] row: array)
     {
-        for(String[] row: array)
+        for(String play: row)
         {
-            for(String play: row)
-            {
-                System.out.print(play + " ");
-            }
-            System.out.println();
+            System.out.print(play+ " ");
         }
+        System.out.println();
     }
 }
+
+}
+
