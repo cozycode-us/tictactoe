@@ -15,3 +15,7 @@ public TicTacToe() {
         }
     }
 }
+public String[][] getBoard() {
+    return board;
+}
+}
