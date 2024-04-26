@@ -15,6 +15,10 @@ public class TicTacToe
         this.turn = turn;
     }
    
+   public String[][] getBoard() {
+       return board;
+   }
+   
    //this method returns the current turn
    public int getTurn()
    {
